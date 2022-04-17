@@ -34,14 +34,7 @@ const questions = [
           type: "list",
           name: "licenseName",
           message: "Choose your license:",
-          choices: ["MIT", "GPLv2", "Apache", "GPLv3", "BSD3-clause", "LGPLv3", "AGPLv3"],
-        }
-        ,
-        {
-          type: "list",
-          name: "licenseColor",
-          message: "Choose your license color:",
-          choices: ["brightgreen", "blueviolet", "red", "orange", "yellow", "lightgrey", "yellowgreen"],
+          choices: ["MIT", "GPLv2", "Apache"],
         }
       ];
 
@@ -69,20 +62,3 @@ function init() {
 // Function call to initialize app
 init();
 
-
-// inquirer
-//   .prompt([
-//     {
-//       type: 'input',
-//       name: 'name',
-//       message: 'What is your application name?',
-//     },
-//     {
-//       type: 'input',
-//       name: 'usage',
-//       message: 'What should you use it for?',
-//     }
-//   ])
-//   .then(() => {
-   
-//   });
