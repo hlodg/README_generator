@@ -12,8 +12,36 @@ const questions = [
         },
         {
           type: 'input',
+          name: 'description',
+          message: 'Please describe your project.',
+        },
+        {
+          type: 'input',
           name: 'usage',
           message: 'What should you use it for?',
+        },
+        {
+          type: 'input',
+          name: 'installation',
+          message: 'How do you install it?',
+        }, 
+        {
+          type: 'input',
+          name: 'credits',
+          message: 'Who else worked on this project with you?',
+        },
+        {
+          type: "list",
+          name: "licenseName",
+          message: "Choose your license:",
+          choices: ["MIT", "GPLv2", "Apache", "GPLv3", "BSD3-clause", "LGPLv3", "AGPLv3"],
+        }
+        ,
+        {
+          type: "list",
+          name: "licenseColor",
+          message: "Choose your license color:",
+          choices: ["brightgreen", "blueviolet", "red", "orange", "yellow", "lightgrey", "yellowgreen"],
         }
       ];
 
