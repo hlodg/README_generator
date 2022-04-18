@@ -1,59 +1,44 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
- let licensebutton;
 function renderLicenseBadge(license) { 
-  if(licenseName==="MIT"){
-    if(licenseName==="MIT"){
-      licensebutton = [![MIT]('https://img.shields.io/badge/License-MIT-yellowgreen')];
-    }
+  if(license==="MIT"){
+    return '![](https://img.shields.io/badge/License-MIT-yellowgreen)'
   }
-  else if (licenseName==="GPLv2"){
-    licensebutton = [![GPLv2]('https://img.shields.io/badge/License-GPLv2-orange')];
+  else if (license==="GPLv2"){
+    return'![](https://img.shields.io/badge/License-GPLv2-orange)'
   }
-  else if (licenseName==="Apache"){
-    licensebutton = [![Apache]('https://img.shields.io/badge/License-Apache-blueviolet')];
+  else if (license==="Apache"){
+    return '![](https://img.shields.io/badge/License-Apache-blueviolet)'
   }
-  else{
-    return ''
+  else {
+    return '';
   }
 }
 
 
-let link;
 
-// TODO: Create a function that returns the license link
+//Create a function that returns the license link
 // If there is no license, return an empty string
-// function renderLicenseLink(license) {
-//   let licenseName=license.choices;
-//   if(licenseName==="MIT"){
-//     link = 'https://img.shields.io/badge/License-MIT-yellowgreen'
-//   }
-//   else if (licenseName==="GPLv2"){
-//     link = 'https://img.shields.io/badge/License-GPLv2-orange'
-//   }
-//   else if (licenseName==="Apache"){
-//     link = 'https://img.shields.io/badge/License-Apache-blueviolet'
-//   }
-//   else {
-//     return '';
-//   }
+function renderLicenseLink(license) {
+  if (license){
+    return `- [License](#license)`
+  }
+  else {
+    return ``
+  }
+}
 
-// }
-
-// TODO: Create a function that returns the license section of README
+//  Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
-    if(license){
-      return ${[licensebutton]};
-    }
-    else{
-      return '';
-    }
+  return `This license is ${license}.`
 }
 
 function generateMarkdown(answers) {
   return `
   # ${answers.name}
+
+${renderLicenseBadge(answers.license)}
 
   ## Description
   ${answers.description}
@@ -64,7 +49,7 @@ function generateMarkdown(answers) {
   - [Installation](#installation)
   - [Usage](#usage)
   - [Credits](#credits)
-  - [License](#license)
+${renderLicenseLink(answers.license)}
 
   ## Installation
   ${answers.installation}
@@ -76,8 +61,7 @@ function generateMarkdown(answers) {
   ${answers.credits}
 
   ## License
-  ${[license]};
-
+  ${renderLicenseSection(answers.license)}
   `;
 }
 
