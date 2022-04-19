@@ -1,10 +1,10 @@
 
-  # ;fh;dfdsa
+  # ReadME Generator
 
-![](https://img.shields.io/badge/License-GPLv2-orange)
+![](https://img.shields.io/badge/License-Apache-blueviolet)
 
   ## Description
-  ;fkdsah
+  This project was created in order to help developers make a great looking ReadMe on every file. This command line application makes it so that every readME will earn me an A grade on every assignment. It includes not only the information about the user but the information about licenses, installation and processes.
 
   ## Table of Contents (Optional)
 
@@ -15,14 +15,14 @@
 - [License](#license)
 
   ## Installation
-  afksjd
+  npm init -y and npm i (to install package json)
 
   ## Usage
-  ldasfhk
+  You should use it to create the best looking readME possible that has all of the information of a good readME file. 
 
   ## Credits
-  ;lhas
+   
 
   ## License
-  This license is GPLv2.
+  This license is Apache.
   
